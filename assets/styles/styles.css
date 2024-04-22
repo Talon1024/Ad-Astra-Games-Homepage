@@ -1,0 +1,171 @@
+/* General/global styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: sans-serif;
+}
+
+body {
+	margin: 0;
+	background-color: black;
+	color: white;
+}
+
+h1, h2 {
+	font-family: 'Maven Pro', sans-serif;
+}
+
+h1 {
+	font-size: 3rem;
+}
+
+.brandfont {
+	font-family: 'Maven Pro', sans-serif;
+}
+
+/* Header: nav bar and introduction "jumbotron" */
+
+header > nav {
+	background: linear-gradient(to bottom, #444, #111);
+	border-bottom: 1px solid #222;
+	color: white;
+}
+header > nav a {
+	color: white;
+}
+header > nav > ul {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	height: 3rem;
+	margin: 0;
+	list-style-type: none;
+}
+header > nav > ul > * {
+	flex-basis: 144px;
+}
+
+header > nav > ul > li > * {
+	margin: 0;
+}
+
+header > nav > ul > .company-title {
+	margin-right: auto;
+}
+header > nav h1 {
+	font-size: 1.5rem;
+}
+
+header > .jumbotron {
+	min-height: 50rem;
+	background-image: url("../images/adastra.png");
+	background-size: cover;
+	color: white;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+	border-bottom: 2px solid #333;
+}
+
+@media only screen and (max-width: 800px) {
+	header > .jumbotron {
+		min-height: 25rem;
+	}
+}
+
+/* Main section styles */
+
+.muscles {
+	display: flex;
+	justify-content: space-around;
+}
+
+.muscles.pills > * {
+	flex-basis: 300px;
+	text-align: center;
+	background: linear-gradient(to bottom, #777, #333);
+	border-radius: 1rem;
+	padding: .5rem;
+	margin: .5rem;
+}
+
+main {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+}
+
+main h1 {
+	text-align: center;
+}
+
+main article {
+	border-bottom: 2px solid #333;
+	min-height: 50rem;
+	width: 100%;
+	flex-grow: 1;
+	flex-shrink: 0;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+@media only screen and (max-width: 800px) {
+	.muscles.pills {
+		flex-flow: column nowrap;
+		align-items: center;
+	}
+	.muscles.pills > * {
+		flex-basis: 0;
+	}
+	main article {
+		min-height: 25rem;
+	}
+}
+@media only screen and (max-width: 800px) and (min-width: 651px) {
+	.muscles.pills > * {
+		width: 80%;
+	}
+}
+@media only screen and (max-width: 650px) {
+	.muscles.pills {
+		align-items: stretch;
+	}
+}
+
+/* Styles for each section */
+
+#about {
+	/* From NASA, image is in the public domain */
+	/* https://images.nasa.gov/details/PIA04227 */
+	background-image: url("../images/dimbg.png"), url("../images/bg_about.png");
+	background-size: cover;
+}
+
+#contact {
+	/* From NASA, image is in the public domain */
+	/* https://images.nasa.gov/details/GSFC_20171208_Archive_e001518 */
+	background-image: url("../images/dimbg.png"), url("../images/bg_contact.png");
+	background-size: cover;
+}
+
+#games {
+	/* From NASA, image is in the public domain */
+	/* https://images.nasa.gov/details/carina_nebula */
+	background-image: url("../images/dimbg.png"), url("../images/bg_games.png");
+	background-size: cover;
+}
+
+/* Styles for each "pill" */
+
+.social-icons img {
+	max-width: 2.5rem;
+	height: auto;
+}
