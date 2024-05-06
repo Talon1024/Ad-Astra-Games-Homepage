@@ -33,7 +33,13 @@ header > nav {
 	border-bottom: 1px solid #222;
 	color: white;
 }
-header > nav a {
+header > nav a:link {
+	color: white;
+}
+header > nav a:visited {
+	color: white;
+}
+header > nav a:hover {
 	color: white;
 }
 header > nav > ul {
@@ -168,4 +174,20 @@ main article {
 .social-icons img {
 	max-width: 2.5rem;
 	height: auto;
+}
+
+a {
+	transition: color 0.125s;
+}
+a:link {
+	color: #08F;
+}
+a:visited {
+	color: #08F;
+}
+a:hover {
+	color: #0CF;
+}
+a:active {
+	color: #FFF;
 }
